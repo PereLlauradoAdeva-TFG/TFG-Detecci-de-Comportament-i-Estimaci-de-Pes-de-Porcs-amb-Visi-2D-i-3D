@@ -54,4 +54,4 @@ Granja_Nova/ (i Granja Antiga/)
 └── videos/    (1 vídeo original d'exemple per granja)
 
 ---
-**Autor:** Pere Llauradó Adeva (NIA: 1669502)
+**Autor:** Pere Llauradó Adeva (NIU: 1669502)
