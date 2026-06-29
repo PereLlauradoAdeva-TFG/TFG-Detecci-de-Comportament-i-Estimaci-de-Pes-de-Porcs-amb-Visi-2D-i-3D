@@ -4,15 +4,14 @@
 
 ## Resum del Projecte (TFG)
 
-L’augment de prop d’un 20% de la població porcina a la Península Ibèrica durant els últims 10 anys fa inviable que els ramaders, sense els recursos tecnològics adequats, puguin controlar el benestar, l’activitat i el pes de cadascun dels animals. Aquest projecte busca entrenar models d’IA capaces d’automatitzar el monitoratge de l’activitat i el benestar del bestiar, amb l’objectiu d'apropar aquesta tecnologia a les petites explotacions per millorar-ne la competitivitat, alhora que permet a les grans instal·lacions optimitzar l'eficiència i garantir el benestar dels porcs. 
-
-A més, a causa de les dificultats en l’obtenció de dades necessàries per a predir el pes, s’ha investigat el camp dels Espais de Dades i se n’ha creat una representació a petita escala. Aquesta iniciativa de la Unió Europea permet la col·laboració entre diferents empreses per entrenar models d’intel·ligència artificial sense necessitat de compartir explícitament les seves dades, ni dependre de les dades d’una sola empresa. Gràcies a la recerca duta a terme en aquest projecte, s’ha desenvolupat un model altament precís i robust, capaç d’operar en diferents granges, condicions de lluminositat i genètica de porcs.
+L’augment de prop d’un 20% de la població porcina a la Península Ibèrica durant els últims 10 anys fa inviable que els ramaders, sense els recursos tecnològics adequats, puguin controlar el benestar, l’activitat i el pes de cadascun dels animals. Aquest projecte busca entrenar models d’IA capaços d’automatitzar el monitoratge de l’activitat i el benestar del bestiar, amb l’objectiu d'apropar aquesta tecnologia a les petites explotacions per millorar-ne la competitivitat, alhora que permet a les grans instal·lacions optimitzar l'eficiència i garantir el benestar dels porcs. A més a més, a causa de les dificultats en l’obtenció de dades necessàries per a predir el pes, s’ha investigat el camp dels Espais de Dades i se n’ha creat una representació a petita escala. Aquesta iniciativa de la Unió Europea permet la col·laboració entre diferents empreses per entrenar models d’intel·ligència artificial sense necessitat de compartir explícitament les seves dades, ni dependre de les dades d’una sola empresa. Gràcies a la recerca duta a terme en aquest projecte, s’ha desenvolupat un model altament precís i robust, capaç d’operar en diferents granges, condicions de lluminositat i genètica de porcs.
 
 ---
 
 ## ⚠️ Configuració Prèvia (Rutes)
 
 Per garantir la portabilitat del codi, els camins dins dels scripts s'han parametritzat utilitzant rutes relatives `os.path.join(RUTA_BASE, ...)`. **És imprescindible** modificar la variable `RUTA_BASE` a l'inici de cada Notebook perquè apunti al directori local on hàgiu clonat aquest repositori. 
+
 > **Excepció:** El document `05_processament_3D_homografia.ipynb` no requereix aquest canvi de ruta.
 
 ---
@@ -39,7 +38,14 @@ Aquest repositori conté carpetes amb dades d'exemple per poder provar els model
     * `Granja Antiga/`
     * `Granja_Nova/`
 
-### 📌 Estructura i limitacions del Dataset d'Exemple
+### Limitacions del Dataset d'Exemple
+
+⚠️ Avís important sobre les dades de prova: Per qüestions d'espai i per no sobrecarregar el pes del repositori, s'han inclòs molt poques imatges d'exemple (només 20 fotogrames per granja). Si s'intenta entrenar el model exclusivament amb aquestes imatges, els resultats seran subòptims. No obstant això, en cas que es vulgui provar el sistema de manera completa, s'han adjuntat els vídeos originals dins la carpeta videos/ i es disposa de tots els scripts necessaris (com ara el 01_processament_dades_2D.ipynb) per poder extreure'n la totalitat de les dades i provar el codi amb un dataset complet.
+
+Autor: Pere Llauradó Adeva (NIU: 1669502)
+
+### 📌 Estructura
+
 A dins de cadascuna d'aquestes carpetes s'hi reprodueix l'estructura de directoris estàndard necessària per entrenar models YOLO. L'arbre de fitxers de cada granja és el següent:
 
 ```text
@@ -52,6 +58,3 @@ Granja_Nova/ (i Granja Antiga/)
 │   ├── train/ (16 arxius d'etiquetes)
 │   └── val/   (4 arxius d'etiquetes)
 └── videos/    (1 vídeo original d'exemple per granja)
-
----
-**Autor:** Pere Llauradó Adeva (NIU: 1669502)
