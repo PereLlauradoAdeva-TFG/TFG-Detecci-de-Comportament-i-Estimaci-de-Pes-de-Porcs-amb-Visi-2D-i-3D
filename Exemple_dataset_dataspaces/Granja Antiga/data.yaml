@@ -1,0 +1,5 @@
+train: /content/drive/MyDrive/Tfg/Dataspaces/Granja_Antiga/images/train
+val: /content/drive/MyDrive/Tfg/Dataspaces/Granja_Antiga/images/val
+
+nc: 1
+names: ['porc']
